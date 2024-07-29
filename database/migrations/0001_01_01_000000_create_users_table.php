@@ -33,7 +33,7 @@ return new class extends Migration
             $table->string('id')->primary();
             $table->string('nom');
             $table->string('email');
-            $table->string('motDePasse');
+            $table->string('password');
             $table->string('adresse');
             $table->string('role');
             

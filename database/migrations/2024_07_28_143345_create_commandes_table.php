@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('user_id');
             $table->integer('panier_id');
             $table->string('etat');
-            $table->float('total');
+            $table->float('total_prix');
             $table->timestamps();
         });
     }

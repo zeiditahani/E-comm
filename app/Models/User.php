@@ -18,7 +18,10 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'prenom',
         'email',
+        'adresse',
+        'role',
         'password',
     ];
 
@@ -44,4 +47,11 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function commande(){
+        return $this->HasMany(commande::class);
+    }
+    public function panier(){
+        return $this->hasOne(Panier::class);
+    }
+    function concat(){}
 }
